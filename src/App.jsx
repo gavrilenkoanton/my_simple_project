@@ -1,10 +1,14 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
+import MyName from "./MyName/MyName";
+import MyQualities from "./MyQualities/MyQualities";
 
-function App() {
+function App(props) {
+
   return (
-    <div className="App">
-
+    <div className={styles.App}>
+        <MyName />
+        <MyQualities mySkills={props.mySkills}/>
     </div>
   );
 }
